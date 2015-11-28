@@ -61,4 +61,8 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+  def find_by_director
+    @movies = Movie.where(director: CGI.unescape(params[:director]))
+  end
+
 end
