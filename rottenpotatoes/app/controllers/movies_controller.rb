@@ -5,12 +5,14 @@ class MoviesController < ApplicationController
   end
 
   def show
+
     id = params[:id] # retrieve movie ID from URI route
     @movie = Movie.find(id) # look up movie by unique ID
     # will render app/views/movies/show.<extension> by default
   end
 
   def index
+
     sort = params[:sort] || session[:sort]
     case sort
     when 'title'
@@ -62,7 +64,12 @@ class MoviesController < ApplicationController
   end
 
   def find_by_director
-    @movies = Movie.where(director: CGI.unescape(params[:director]))
+    unless params[:director] == 'nil'
+      @movies = Movie.where(director: CGI.unescape(params[:director]))
+    else
+      flash[:no_director_found_message] = "'#{CGI.unescape(params[:title])}' has no director info"
+      redirect_to '/movies'
+    end
   end
 
 end

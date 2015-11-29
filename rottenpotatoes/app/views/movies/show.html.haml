@@ -11,7 +11,7 @@
     = @movie.release_date.strftime("%B %d, %Y")
   %li
     Director:
-    = link_to 'Find Movies With Same Director', "/movies/director/#{CGI.escape @movie.director}"
+    = link_to 'Find Movies With Same Director', "/movies/director/#{@movie.director.blank? ? 'nil' : CGI.escape(@movie.director)}/#{CGI.escape(@movie.title)}"
 
 %h3 Description:
 

@@ -13,7 +13,7 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the home\s?page$/ then '/'
+    when /^the home\s?page$/ then '/movies'
     when /^the edit page for "(.*)"$/
       movie_id = Movie.find_by_title($1).id
       "/movies/#{movie_id}/edit"
@@ -22,7 +22,7 @@ module NavigationHelpers
       "/movies/#{movie_id}"
     when /^the Similar Movies page for "(.*)"$/
       movie_director = Movie.find_by_title($1).director
-      "/movies/director/#{CGI.escape(movie_director)}"
+      "/movies/director/#{CGI.escape(movie_director)}/#{CGI.escape($1)}"
 
 
     # Add more mappings here.
