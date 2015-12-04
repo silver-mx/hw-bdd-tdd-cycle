@@ -17,7 +17,7 @@
         1,
         null,
         1,
-        0,
+        2,
         null,
         null,
         1,
@@ -29,26 +29,26 @@
         null,
         1,
         null,
-        0,
+        3,
+        3,
+        null,
+        1,
+        null,
+        2,
+        null,
+        3,
+        3,
+        null,
+        3,
         0,
         null,
-        0,
         null,
-        0,
+        3,
+        1,
+        1,
+        1,
         null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
+        2,
         null,
         null,
         1,
@@ -56,9 +56,10 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         1,
@@ -98,12 +99,12 @@
       "/home/diego/Development/workarea/edx_saas_1/hw-bdd-tdd-cycle/rottenpotatoes/app/models/movie.rb": [
         1,
         1,
-        0,
+        3,
         null,
         null
       ]
     },
-    "timestamp": 1448831705
+    "timestamp": 1449264478
   },
   "Cucumber Features": {
     "coverage": {
@@ -160,6 +161,7 @@
         0,
         0,
         0,
+        0,
         null,
         null,
         1,
@@ -209,6 +211,6 @@
         null
       ]
     },
-    "timestamp": 1448831743
+    "timestamp": 1449264486
   }
 }
